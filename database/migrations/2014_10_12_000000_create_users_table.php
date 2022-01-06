@@ -19,6 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('document');
+            $table->string('telephone');
+            $table->string('gender');
+            $table->string('id_consultorio'); //Esto aplicara cuando el usuario sea rol "Doctor"
+            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });
